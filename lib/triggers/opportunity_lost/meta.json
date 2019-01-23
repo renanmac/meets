@@ -1,0 +1,193 @@
+{
+  "name": {
+    "pt_BR": "Oportunidade perdida",
+    "en": "Opportunity lost"
+  },
+  "description": {
+    "pt_BR": "Oportunidade perdida",
+    "en": "Lost Opportunity"
+  },
+  "trigger_fields": {
+    "type": "local",
+    "fields": [
+      {
+        "key": "id_oportunidade",
+        "name": "ID",
+        "description": "ID",
+        "field_type": "integer"
+      },
+      {
+        "key": "status",
+        "name": "Status",
+        "description": "Status",
+        "field_type": "string"
+      },
+      {
+        "key": "data_cadastro",
+        "name": "Data de cadastro",
+        "description": "Data de cadastro",
+        "field_type": "datetime"
+      },
+      {
+        "key": "descricao",
+        "name": "Descrição",
+        "description": "Descrição",
+        "field_type": "string"
+      },
+      {
+        "key": "id_etapa",
+        "name": "ETAPA ID",
+        "description": "ETAPA ID",
+        "field_type": "integer"
+      },
+      {
+        "key": "etapa",
+        "name": "Etapa",
+        "description": "Etapa do Funil",
+        "field_type": "string"
+      },
+      {
+        "key": "id_funil",
+        "name": "FUNIL ID",
+        "description": "FUNIL ID",
+        "field_type": "integer"
+      },
+      {
+        "key": "funil",
+        "name": "Funil",
+        "description": "Funil",
+        "field_type": "string"
+      },
+      {
+        "key": "id_usuario",
+        "name": "USUARIO RESPONSAVEL ID",
+        "description": "USUARIO RESPONSAVEL ID",
+        "field_type": "integer"
+      },
+      {
+        "key": "responsavel",
+        "name": "USUARIO RESPONSAVEL",
+        "description": "USUARIO RESPONSAVEL",
+        "field_type": "string"
+      },
+      {
+        "key": "motivo_perda",
+        "name": "Motivo Perda",
+        "description": "Motivo Perda",
+        "field_type": "string"
+      },
+      {
+        "key": "id_motivo_perda",
+        "name": "MOTIVO PERDA ID",
+        "description": "MOTIVO PERDA ID",
+        "field_type": "integer"
+      },
+      {
+        "key": "valor",
+        "name": "Valor total",
+        "description": "Valor total",
+        "field_type": "decimal"
+      },
+
+      {
+        "key": "id_pessoa",
+        "name": "Cliente ID",
+        "description": "Cliente ID",
+        "field_type": "integer"
+      },
+      {
+        "key": "atuacao",
+        "name": "Atuação",
+        "description": "Área de Atuação",
+        "field_type": "string"
+      },
+      {
+        "key": "origem",
+        "name": "Origem",
+        "description": "Origem",
+        "field_type": "string"
+      },
+      {
+        "key": "bairro",
+        "name": "Bairro",
+        "description": "Bairro",
+        "field_type": "string"
+      },
+      {
+        "key": "celular",
+        "name": "Celular",
+        "description": "Celular",
+        "field_type": "string"
+      },
+      {
+        "key": "cep",
+        "name": "CEP",
+        "description": "CEP",
+        "field_type": "string"
+      },
+      {
+        "key": "cidade",
+        "name": "Cidade",
+        "description": "Cidade",
+        "field_type": "string"
+      },
+      {
+        "key": "cliente",
+        "name": "Nome do Cliente",
+        "description": "Nome do Cliente",
+        "field_type": "string"
+      },
+      {
+        "key": "cnpj",
+        "name": "CNPJ",
+        "description": "CNPJ",
+        "field_type": "string"
+      },
+      {
+        "key": "cpf",
+        "name": "CPF",
+        "description": "CPF",
+        "field_type": "string"
+      },
+      {
+        "key": "email",
+        "name": "Email",
+        "description": "Email",
+        "field_type": "string"
+      },
+      {
+        "key": "fone",
+        "name": "Telefone",
+        "description": "Telefone",
+        "field_type": "string"
+      },
+      {
+        "key": "logradouro",
+        "name": "Endereço do Cliente",
+        "description": "Endereço do Cliente",
+        "field_type": "string"
+      },
+      {
+        "key": "numero",
+        "name": "Numero",
+        "description": "Numero",
+        "field_type": "string"
+      },
+      {
+        "key": "tipo_pessoa",
+        "name": "Tipo Pessoa",
+        "description": "Tipo Pessoa",
+        "field_type": "string"
+      },
+      {
+        "key": "uf",
+        "name": "UF do Cliente",
+        "description": "UF do Cliente",
+        "field_type": "string"
+      }
+    ]
+  },
+  "configuration_fields": [],
+  "trigger_type": "polling",
+  "idempotent": ["id_oportunidade"]
+}

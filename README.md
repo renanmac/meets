@@ -1,5 +1,5 @@
-# myapp
-MyApp app on Pluga
+# Meets
+Meets app on Pluga
 
 ### Install Node.js with [nvm](https://github.com/creationix/nvm)
 ```sh
