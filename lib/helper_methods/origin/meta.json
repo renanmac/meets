@@ -1,0 +1,18 @@
+{
+    "name": "Listar todas as origens",
+    "helper_method_key": "origin",
+    "requests":[
+      {
+        "method_name":"/origem/listar",
+        "response_field": ["dados"],
+        "mapping":{
+          "label":{
+            "fields": ["origem"]
+          },
+          "value":{
+            "field": "id_origem"
+          }
+        }
+      }
+    ]
+  }

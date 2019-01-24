@@ -1,0 +1,284 @@
+{
+  "name": {
+    "pt_BR": "Adicionar oportunidade",
+    "en": "Add opportunity"
+  },
+  "description": {
+    "pt_BR": "Adicionar uma nova oportunidade",
+    "en": "Add a new opportunity"
+  },
+  "action_fields": {
+    "fields": [
+      {
+        "key": "descricao",
+        "name": { "pt_BR": "Título", "en": "Título" },
+        "description": {"pt_BR": "Título da Oportunidade","en": "Título"},
+        "required": false,
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "string"
+      },
+      {
+        "key": "id_status",
+        "label": { "pt_BR": "Tag/Status da Oportunidade", "en": "Tag/Status" },
+        "description": {
+          "pt_BR": "Selecione uma Tag/Status",
+          "en": "Select an Tag/Status"
+        },
+        "placeholder": {
+          "pt_BR": "-",
+          "en": "-"
+        },
+        "visible": true,
+        "field_type": "dropdown",
+        "data_type": "integer",
+        "list": {
+          "type": "remote",
+          "helper_method": "status"
+        }
+      },
+      {
+        "key": "id_usuario",
+        "label": { "pt_BR": "Responsável", "en": "Owner" },
+        "description": {
+          "pt_BR": "Usuário responsável pela Oportunidade.",
+          "en": "Owner User"
+        },
+        "placeholder": {
+          "pt_BR": "-",
+          "en": "-"
+        },
+        "visible": true,
+        "field_type": "dropdown",
+        "data_type": "integer",
+        "list": {
+          "type": "remote",
+          "helper_method": "user"
+        }
+      },
+      {
+        "key": "valor",
+        "name": { "pt_BR": "Valor total", "en": "Amount" },
+        "description": {
+          "pt_BR": "Valor total (em reais) da Oportunidade.",
+          "en": "Amount"},
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "decimal"
+      },
+      {
+        "key": "produtos",
+        "label": { "pt_BR": "Produtos/Serviços", "en": "Products/Services" },
+        "description": {
+          "pt_BR": "Produtos/Serviços desta Oportunidade.",
+          "en": "Products/Services for this Opportunity."
+        },
+        "placeholder": {
+          "pt_BR": "-",
+          "en": "-"
+        },
+        "visible": true,
+        "field_type": "dropdown",
+        "data_type": "integer",
+        "list": {
+          "type": "remote",
+          "helper_method": "product"
+        }
+      },
+      {
+        "key": "razao_cliente",
+        "name": { "pt_BR": "Nome/Razão Social", "en": "Customer/Legal Name" },
+        "description": {
+          "pt_BR": "Nome ou Razão Social do Cliente.",
+          "en": "Client/Customer name"
+        },
+        "visible": true,
+        "advanced": true,
+        "field_type": "custom",
+        "data_type": "string"
+      },
+      {
+        "key" : "tipo_pessoa",
+        "label": { "pt_BR": "Tipo", "en": "Type" },
+        "description": {
+          "pt_BR": "Escolha o tipo do cliente, se Jurídica ou Física.",
+          "en": "Type"
+        },
+        "placeholder": {
+          "pt_BR": "-",
+          "en": "-"
+        },
+        "required": true,
+        "visible": true,
+        "field_type": "dropdown",
+        "data_type": "string",
+        "list": {
+          "type" : "local",
+          "data": [
+            {"label": "Jurídica", "value": "PJ"},
+            {"label": "Física", "value": "PF"}
+          ]
+        }
+      },
+      {
+        "key": "cpf",
+        "name": { "pt_BR": "CPF", "en": "CPF" },
+        "description": {
+          "pt_BR": "CPF do Cliente",
+          "en": "CPF do Cliente"
+        },
+        "visible": true,
+        "advanced": true,
+        "field_type": "custom",
+        "data_type": "string"
+      },
+      {
+        "key": "cnpj",
+        "name": { "pt_BR": "CNPJ", "en": "CNPJ" },
+        "description": {
+          "pt_BR": "CNPJ da Empresa",
+          "en": "CNPJ da Empresa"
+        },
+        "visible": true,
+        "advanced": true,
+        "field_type": "custom",
+        "data_type": "string"
+      },
+      {
+        "key": "celular_cliente",
+        "name": { "pt_BR": "Celular", "en": "Mobile" },
+        "description": {
+          "pt_BR": "Celular",
+          "en": "Mobile"
+        },
+        "visible": true,
+        "advanced": true,
+        "field_type": "custom",
+        "data_type": "string"
+      },
+      {
+        "key": "email_cliente",
+        "name": { "pt_BR": "E-mail", "en": "E-mail" },
+        "description": {
+          "pt_BR": "E-mail.",
+          "en": "e-mail"
+        },
+        "visible": true,
+        "advanced": true,
+        "field_type": "custom",
+        "data_type": "string"
+      },
+      {
+        "key": "fone_cliente",
+        "name": { "pt_BR": "Telefone", "en": "Phone" },
+        "description": {
+          "pt_BR": "Telefone.",
+          "en": "Phone"},
+        "visible": true,
+        "advanced": true,
+        "field_type": "custom",
+        "data_type": "string"
+      },
+      {
+        "key": "id_atuacao",  
+        "label": { "pt_BR": "Área de Atuação", "en": "Occupation area" },
+        "description": {
+          "pt_BR": "Área de atuação.",
+          "en": "Customer's area of operation."
+        },
+        "placeholder": {
+          "pt_BR": "-",
+          "en": "-"
+        },
+        "visible": true,
+        "advanced": true,
+        "field_type": "dropdown",
+        "data_type": "integer",
+        "list": {
+          "type": "remote",
+          "helper_method": "occupation_area"
+        }
+      },
+      {
+        "key": "id_origem",
+        "label": { "pt_BR": "Origem", "en": "Origin" },
+        "description": {
+          "pt_BR": "Origem do Cliente.",
+          "en": "Customer Origin"
+        },
+        "placeholder": {
+          "pt_BR": "-",
+          "en": "-"
+        },
+        "visible": true,
+        "advanced": true,
+        "field_type": "dropdown",
+        "data_type": "integer",
+        "list": {
+          "type": "remote",
+          "helper_method": "origin"
+        }
+      },
+      {
+        "key": "cidade",
+        "name": { "pt_BR": "Cidade", "en": "City" },
+        "description": {
+          "pt_BR": "Cidade do Cliente.",
+          "en": "Customer's City."
+        },
+        "visible": true,
+        "advanced": true,
+        "field_type": "custom",
+        "data_type": "string"
+      },
+      {
+        "key" : "uf",
+        "label": { "pt_BR": "Estado", "en": "State" },
+        "description": {
+          "pt_BR": "Escolha o estado do cliente.",
+          "en": "Customer State"
+        },
+        "placeholder": {
+          "pt_BR": "-",
+          "en": "-"
+        },
+        "required": true,
+        "visible": true,
+        "field_type": "dropdown",
+        "data_type": "string",
+        "list": {
+          "type" : "local",
+          "data": [
+            {"label": "Acre", "value": "AC"},
+            {"label": "Alagoas", "value": "AL"},
+            {"label": "Amapá", "value": "AP"},
+            {"label": "Amazonas", "value": "AM"},
+            {"label": "Bahia", "value": "BA"},
+            {"label": "Ceará", "value": "CE"},
+            {"label": "Distrito Federal", "value": "DF"},
+            {"label": "Espírito Santo", "value": "ES"},
+            {"label": "Goiás", "value": "GO"},
+            {"label": "Maranhão", "value": "MA"},
+            {"label": "Mato Grosso", "value": "MT"},
+            {"label": "Mato Grosso do Sul", "value": "MS"},
+            {"label": "Minas Gerais", "value": "MG"},
+            {"label": "Pará", "value": "PA"},
+            {"label": "Paraíba", "value": "PB"},
+            {"label": "Paraná", "value": "PR"},
+            {"label": "Pernambuco", "value": "PE"},
+            {"label": "Piauí", "value": "PI"},
+            {"label": "Rio de Janeiro", "value": "RJ"},
+            {"label": "Rio Grande do Norte", "value": "RN"},
+            {"label": "Rio Grande do Sul", "value": "RS"},
+            {"label": "Rondônia", "value": "RO"},
+            {"label": "Roraima", "value": "RR"},
+            {"label": "Santa Catarina", "value": "SC"},
+            {"label": "São Paulo", "value": "SP"},
+            {"label": "Sergipe", "value": "SE"},
+            {"label": "Tocantins", "value": "TO"}
+          ]
+        }
+      }
+    ]
+  }
+}
