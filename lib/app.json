@@ -1,4 +1,32 @@
 {
   "app_id": "meets",
-  "name": "Meets"
+  "name": "Meets",
+  "color": "#00AEED",
+  "description": {
+    "pt_BR": "O Meets foi concebido para tornar as coisas simples e práticas. Ao permitir que você visualize todo o seu processo de vendas acompanhando as atividades certas a serem realizadas.",
+    "en": "O Meets foi concebido para tornar as coisas simples e práticas. Ao permitir que você visualize todo o seu processo de vendas acompanhando as atividades certas a serem realizadas."
+  },
+  "website": "http://meets.com.br",
+  "signup_url": "http://meets.com.br/index/teste-gratis",
+  "api_base_uri": {
+    "production": {
+      "uri": "https://acesso.meets.com.br",
+      "label": "Produção",
+      "default": true
+    }
+  },
+  "authentication": {
+    "type": "pass_through_header",
+    "fields": [
+      {
+        "name": "token",
+        "label": "Chave de API",
+        "mapping": "Authorization",
+        "type": "text"
+      }
+    ],
+    "ping_request": {
+      "method": "/usuarios/listar"
+    }
+  }
 }
