@@ -13,7 +13,7 @@
         "key": "descricao",
         "name": { "pt_BR": "Título", "en": "Título" },
         "description": {"pt_BR": "Título da Oportunidade","en": "Título"},
-        "required": false,
+        "required": true,
         "visible": true,
         "field_type": "custom",
         "data_type": "string"
@@ -180,7 +180,7 @@
         "data_type": "string"
       },
       {
-        "key": "id_atuacao",  
+        "key": "id_atuacao",
         "label": { "pt_BR": "Área de Atuação", "en": "Occupation area" },
         "description": {
           "pt_BR": "Área de atuação.",
