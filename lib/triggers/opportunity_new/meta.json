@@ -189,5 +189,7 @@
   },
   "configuration_fields": [],
   "trigger_type": "polling",
-  "idempotent": ["id_oportunidade"]
+  "idempotent": [
+    { "type": "body", "field": "id_oportunidade" }
+  ]
 }
