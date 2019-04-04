@@ -49,6 +49,7 @@
           "en": "-"
         },
         "visible": true,
+        "required": true,
         "field_type": "dropdown",
         "data_type": "integer",
         "list": {
